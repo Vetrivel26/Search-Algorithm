@@ -19,32 +19,92 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+Program for linear search method to match the item in a list
+Developed by: your name VETRIVEL S
+RegisterNumber: 21000733
 
+def linearsearch(array, n, k):
 
+    for i in range(0, n):
+        if (array [i] == k):
+            return i
+    return -1
 
+array = eval(input())
+k =  eval(input())
+n = len(array)
+array.sort()
+result = linearsearch(array, n, k)
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ", result)
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by: vetrivel
+RegisterNumber: 21000733
 
+def linearsearch(array, n, k):
 
+    for i in range(0, n):
+        if (array [i] == k):
+            return i
+    return -1
 
-
-
+array = eval(input())
+k =  eval(input())
+n = len(array)
+array.sort()
+result = linearsearch(array, n, k)
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ", result)
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by: vetrivel
+RegisterNumber: 21000733
 
+def BinarySearch(array, l, r, k):
 
+    if r >= l:
 
+        mid = l + (r - l) // 2
 
+        if array[mid] == k:
+            return mid
+        elif array[mid] > k:
+            return BinarySearch(array, l, mid-1, k)
+        else:
+            return BinarySearch(array, mid + 1, r, k)
+    else:
+        return -1
+array = eval(input())
+k = eval(input())
+array.sort()
+result = BinarySearch(array, 0, len(array)-1, k)
 
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ", result)
 ```
 ## Sample Input and Output
-
-
-
-
-
-
+OUTPUT 1:
+![gitlog](ss1.png)
+OUTPUT 2:
+![gitlog](ss2.png)
+OUTPUT 3:
+![gitlog](ss3.png)
 ## Result
 Thus the linear search and binary search algorithm is implemented using python programming.
